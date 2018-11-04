@@ -19,16 +19,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Students</a>
+        <a class="nav-link" href="students.php">Students</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Courses</a>
+        <a class="nav-link" href="courses.php">Courses</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">grades</a>
+        <a class="nav-link" href="grades.php">grades</a>
       </li>
       
     </ul>
