@@ -1,4 +1,9 @@
-<?php include("header.php"); ?>
+<?php include("header.php");
+include("arrays.php");
+
+
+
+?>
 
 
 
@@ -23,46 +28,18 @@
     </tr>
   </thead>
   <tbody>
+  <?php foreach ($students as $id => $name) :?>
   <tr>
-    	<td>1</td>
-    	<td>Ahmed Mohamed</td>
+    	<td><?php echo $id ?></td>
+    	<td><?php echo $name ?></td>
     	<td>
 		<button class="button edit_student" id="1">Edit</button>&nbsp;
 		<button class="button delete_student" id="1">Delete</button>
 	    </td>
     </tr>
-    <tr>
-    	<td>2</td>
-    	<td>Ahmed Mohamed</td>
-    	<td>
-		<button class="button edit_student" id="1">Edit</button>&nbsp;
-		<button class="button delete_student" id="1">Delete</button>
-	    </td>
-    </tr>
-    <tr>
-    	<td>3</td>
-    	<td>Ahmed Mohamed</td>
-    	<td>
-		<button class="button edit_student" id="1">Edit</button>&nbsp;
-		<button class="button delete_student" id="1">Delete</button>
-	    </td>
-    </tr>
-    <tr>
-    	<td>4</td>
-    	<td>Ahmed Mohamed</td>
-    	<td>
-		<button class="button edit_student" id="1">Edit</button>&nbsp;
-		<button class="button delete_student" id="1">Delete</button>
-	    </td>
-    </tr>
-    <tr>
-    	<td>5</td>
-    	<td>Ahmed Mohamed</td>
-    	<td>
-		<button class="button edit_student" id="1">Edit</button>&nbsp;
-		<button class="button delete_student" id="1">Delete</button>
-	    </td>
-    </tr>
+<?php endforeach; ?>
+  
+   
   </tbody>
 </table>
 </div>
