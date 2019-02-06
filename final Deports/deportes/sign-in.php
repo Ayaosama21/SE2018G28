@@ -66,11 +66,11 @@ include_once('nav.php');
     </div>
   </div>
   <button class="btn btn-primary ml-3 mt-3" type="submit">Submit</button>
-
+  </div>
 </form>
+</div>
+</div>
 
-</div>
-</div>
 
 
 

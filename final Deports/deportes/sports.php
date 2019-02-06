@@ -18,7 +18,7 @@ Database::connect('sports', 'root', '');
     style="height: 200px; width:auto;"
      src="<?=$sport->img?>" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"><?=$sport->name?></h5>
+      <h5 class="card-title"><button class="button btn  get_places" id="<?=$sport->id?>"><?=$sport->name?></button></h5>
       <p class="card-text"><?=$sport->info?></p>
      
     </div>
@@ -36,3 +36,12 @@ Database::connect('sports', 'root', '');
 <?php
 include_once('footer.php');
 ?>
+
+<script>
+$(document).ready(function() {
+  $('.get_places').click(function(event) {
+    window.location.href = "sportPlaces.php?id="+$(this).attr('id');
+  });
+  
+});
+</script>
