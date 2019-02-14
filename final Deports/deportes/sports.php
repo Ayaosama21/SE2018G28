@@ -2,7 +2,7 @@
 include_once('nav.php');
 include_once('./models/sport.php');
 include_once('./models/common.php');
-Database::connect('sports', 'root', '');
+Database::connect('deportes', 'root', '');
 ?>
 <div class="container">
 
@@ -11,6 +11,7 @@ Database::connect('sports', 'root', '');
 				$sports = Sport::all(safeGet('keywords'));
 				
 				foreach ($sports as $sport) {
+      
             
 			?>
   <div class="card mb-5">

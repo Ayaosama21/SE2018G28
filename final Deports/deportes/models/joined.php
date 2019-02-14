@@ -1,9 +1,9 @@
 <?php
 include_once('database.php');
 
-class Sport extends Database{
+class Joined extends Database{
     function __construct($id) {
-    $sql = "SELECT * FROM `sport_info` WHERE id = $id;";
+    $sql = "SELECT * FROM `sport-place` WHERE id = $id;";
     $statement = Database::$db->prepare($sql);
     $statement->execute();
     $data = $statement->fetch(PDO::FETCH_ASSOC);
@@ -14,15 +14,17 @@ class Sport extends Database{
 }
 public static function all($keyword) {
     $keyword = str_replace(" ", "%", $keyword);
-    $sql = "SELECT * FROM `sport_info` WHERE img like ('%$keyword%');";
+    $sql = "SELECT * FROM `sport-place` WHERE id like ('%$keyword%');";
     $statement = Database::$db->prepare($sql);
     $statement->execute();
-    $sports= [];
+    $joined= [];
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $sports[] = new Sport($row['id']);
+        $joined[] = new Joined($row['id']);
     }
-    return $sports;
+    return $joined;
 }
+
+
 }
 
 ?>

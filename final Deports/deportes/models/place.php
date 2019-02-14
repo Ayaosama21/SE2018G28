@@ -23,6 +23,23 @@ public static function all($keyword) {
     }
     return $places;
 }
+// public static function joinall($keyword){
+//     $keyword = str_replace(" ", "%", $keyword);
+
+//     $sql="SELECT * 
+//     FROM `sport_info` as i
+//     JOIN `sport-place` as j ON i.id = j.sport_id
+//     JOIN `places` as p ON p.id = j.place_id
+//     ORDER BY j.id ;"
+//       $statement = Database::$db->prepare($sql);
+//       $statement->execute();
+//       $joined= [];
+//       while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+//           $joined[] = new Place($row['id']);
+//       }
+//       return $joined;
+// }
+
 }
 
 ?>
