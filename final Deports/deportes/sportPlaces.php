@@ -9,8 +9,15 @@ Database::connect('deportes', 'root', '');
 $sport = new Sport($sportid)
 
 ?>
+<style>
+  .main{
+    background-image: url("0.jpg");
+  }
+  
+</style>
+<div class="main">
 <div class="container">
-<h1 class="mb-5"><?=$sport->get('name')?></h1>
+<h1 class="mb-5 text-light"><?=$sport->get('name')?></h1>
 
 <div class="card-columns mb-5">
 <?php	
@@ -41,6 +48,7 @@ $sport = new Sport($sportid)
  
 </div>
 
+</div>
 </div>
 
 

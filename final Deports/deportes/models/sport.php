@@ -14,7 +14,7 @@ class Sport extends Database{
 }
 public static function all($keyword) {
     $keyword = str_replace(" ", "%", $keyword);
-    $sql = "SELECT * FROM `sport_info` WHERE img like ('%$keyword%');";
+    $sql = "SELECT * FROM `sport_info` WHERE name like ('%$keyword%');";
     $statement = Database::$db->prepare($sql);
     $statement->execute();
     $sports= [];

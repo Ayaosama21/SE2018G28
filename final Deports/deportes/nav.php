@@ -1,3 +1,4 @@
+<?php include_once('./models/common.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="#">Deportes</a>
+    <a class="navbar-brand" href="index.php">Deportes</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,12 +19,20 @@
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="sports.php">Features</a>
+            <a class="nav-link" href="sports.php">Sports</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="sign-in.php">Sign In</a>
+            <a class="nav-link" href="sign-in.php">Sign Up</a>
         </li>
         </ul>
+    <?php 
+    $absolute_path = basename("sports.php");
+     if(basename($_SERVER['PHP_SELF']) == $absolute_path) : ?>
+    <form class="form-inline my-2 my-lg-0 ml-auto" action="<?php $_SERVER['PHP_SELF']?>">
+      <input class="form-control mr-sm-2" type="text" name="keywords" placeholder="Search" aria-label="Search" value="<?=safeGet('keywords')?>"  >
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+<?php endif; ?>
     </div>
     </nav>
     

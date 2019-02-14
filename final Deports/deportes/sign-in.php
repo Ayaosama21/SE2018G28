@@ -3,6 +3,7 @@
 include_once('nav.php');
 ?>
 
+
 <div class="container">
 
 <form class="needs-validation" novalidate>
@@ -77,3 +78,6 @@ include_once('nav.php');
 <?php
 include_once('footer.php');
 ?>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>swal("Unfortunately, this feature is not functional.", "you can still use our other features, click on sports!");</script>
