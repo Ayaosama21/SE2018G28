@@ -21,7 +21,7 @@ Aya Osama.
 
 -Final White Paper -> https://github.com/Ayaosama21/SE2018G28/blob/master/final%20Deports/Deportes_WhitePaper.pdf
 
--Final BRD ->
+-Final BRD ->  https://github.com/Ayaosama21/SE2018G28/blob/master/final%20Deports/Deportes_BRD%20Final.pdf
 
 -Final SRS ->
 
